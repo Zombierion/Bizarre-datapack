@@ -1,1 +1,0 @@
-give @a blaze_rod[custom_data={killer_queen:1b},custom_name=["",{"text":"Boomstick","color":"#ba00c7"}],rarity=epic,enchantment_glint_override=true,food={nutrition:0,saturation:0,can_always_eat:1b},consumable={consume_seconds:0,animation:none,sound:"block.tripwire.click_on",has_consume_particles:0b}]
