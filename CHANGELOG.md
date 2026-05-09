@@ -1,0 +1,3 @@
+#  ZOMBIERION'S BIZARRE DATAPACK
+## VERSION 0.1 PRE-BETA    04/29/2026
+>  Created data pack
