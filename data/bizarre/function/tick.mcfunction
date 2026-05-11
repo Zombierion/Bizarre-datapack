@@ -1,0 +1,1 @@
+execute as @a unless score @s bizarre.uid matches 0.. run function bizarre:assign_global_uid

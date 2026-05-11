@@ -1,0 +1,6 @@
+function bizarre:class_reset
+
+give @s blaze_rod[custom_data={"class_item":1b,"killer_queen":1b},custom_name=[{"text":"Boomstick","color":"#ba00c7"}],rarity=epic,enchantment_glint_override=true,food={nutrition:0,saturation:0,can_always_eat:true},consumable={consume_seconds:99999,animation:"trident",sound:"block.tripwire.click_on",has_consume_particles:false},use_effects={can_sprint:true,speed_multiplier:1}]
+give @s minecraft:weathered_copper_bulb[custom_name=[{"text":"Secondary Bomb","color":"#ba00c7"}],piercing_weapon={deals_knockback:false},attack_range={hitbox_margin:0.0,max_reach:0.0,min_reach:0.0},minecraft:enchantments={"jojo:use_shabomb":1},custom_data={"class_item":1b},food={nutrition:0,saturation:0,can_always_eat:true},consumable={consume_seconds:99999,has_consume_particles:false,animation:"none"},use_effects={can_sprint:true,speed_multiplier:1}]
+item replace entity @s hotbar.8 with compass[custom_data={"class_item":1b,"killer_queen":1b},custom_name=[{"text":"Primary Bomb Tracker","color":"#ba00c7"}],rarity=epic,enchantment_glint_override=true,lodestone_tracker={target:{dimension:overworld,pos:[I;0,0,0]}}]
+tag @s add class.KillerQueen

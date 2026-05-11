@@ -1,0 +1,2 @@
+$item modify entity @s hotbar.8 {"function":"minecraft:set_components","components":{"minecraft:lodestone_tracker":{"target":{"dimension":"overworld","pos":[$(x),$(y),$(z)]},"tracked":false}}}
+$execute unless entity @n[tag=Explosive] run item modify entity @s hotbar.8 {"function":"minecraft:set_components","components":{"minecraft:lodestone_tracker":{"target":{"dimension":"nether","pos":[$(x),$(y),$(z)]},"tracked":true}}}

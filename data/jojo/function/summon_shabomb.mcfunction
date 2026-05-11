@@ -1,0 +1,5 @@
+execute as @s if score @s killerqueen.sha.cooldown matches 1.. run return fail
+execute at @s[nbt={SelectedItem:{"id":"minecraft:weathered_copper_bulb"}}] run summon minecraft:silverfish ~ ~ ~ {Invulnerable:1b,Silent:1b,Passengers:[{id:"minecraft:block_display",transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.25f,-0.25f,-0.25f],scale:[0.5f,0.5f,0.5f]},block_state:{Name:"minecraft:weathered_copper_bulb",Properties:{lit:"false",powered:"true"}}}],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}],attributes:[{id:"minecraft:attack_damage",base:0},{id:"minecraft:attack_knockback",base:0},{id:"minecraft:follow_range",base:2048},{id:"minecraft:jump_strength",base:0.5},{id:"minecraft:movement_speed",base:0.5},{id:"minecraft:safe_fall_distance",base:1024}],Tags:["killerqueen.sha_bomb","killerqueen.spawn"]}
+scoreboard players set @n[tag=killerqueen.sha_bomb,tag=killerqueen.spawn] killerqueen.sha.timer 200
+scoreboard players operation @n[tag=killerqueen.sha_bomb,tag=killerqueen.spawn] bizarre.uid = @s bizarre.uid
+tag @n[tag=killerqueen.spawn] remove killerqueen.spawn

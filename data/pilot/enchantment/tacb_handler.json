@@ -1,0 +1,110 @@
+{
+  "description": "Element Powered",
+  "supported_items": [],
+  "weight": 1,
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 0,
+  "slots": [
+    "feet"
+  ],
+  "effects": {
+    "minecraft:tick": [
+      {
+        "requirements": {
+          "condition": "minecraft:all_of",
+          "terms": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "pilot.has_double_jumped"
+              },
+              "range": {
+                "max": 0
+              }
+            },
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "pilot.left_ground"
+              },
+              "range": {
+                "min": 2
+              }
+            },
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "pilot.jump_key_down"
+              },
+              "range": {
+                "max": 1
+              }
+            },
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "minecraft:player",
+                  "stats": [],
+                  "input": {
+                    "jump": true
+                  }
+                },
+                "nbt": "{Tags:[\"pilot.element_charge.combustion\"]}",
+                "flags": {
+                  "is_on_ground": false
+                }
+              }
+            }
+          ]
+        },
+        "effect": {
+          "type": "minecraft:all_of",
+          "effects": [
+            {
+              "type": "minecraft:apply_impulse",
+              "direction": [
+                0,
+                1,
+                0
+              ],
+              "coordinate_scale": [
+                0,
+                1,
+                0
+              ],
+              "magnitude": 1
+            },
+            {
+              "type": "minecraft:run_function",
+              "function": "pilot:combustion/double_jump/has_double_jumped"
+            },
+            {
+              "type": "minecraft:play_sound",
+              "sound": {
+                "sound_id": "entity.wind_charge.wind_burst"
+              },
+              "volume": 0.25,
+              "pitch": 0.5
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

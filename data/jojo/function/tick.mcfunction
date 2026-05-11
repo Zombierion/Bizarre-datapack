@@ -1,12 +1,18 @@
-# 1. TAGGING: Check if a mob is hurt, then check for the KillerQueen player nearby
-execute as @e[nbt={HurtTime:10s}] on attacker if entity @s[team=KillerQueen] if items entity @s weapon.mainhand blaze_rod[custom_data={killer_queen:1b}] on origin as @s run tag @s add Explosive
+execute as @e[nbt={HurtTime:10s}] on attacker if items entity @s weapon.mainhand minecraft:blaze_rod run tag @e remove Explosive
+execute as @e[nbt={HurtTime:10s}] on attacker if items entity @s weapon.mainhand minecraft:blaze_rod run tag @e[tag=!class.KillerQueen,nbt={HurtTime:10s}] add Explosive
+execute as @e[tag=Explosive] at @s anchored eyes run particle minecraft:infested ~ ~0.5 ~ 0.2 0.2 0.2 0.01 0
+execute if score @a[tag=class.KillerQueen,limit=1] boomstick-MB2 matches 1.. as @e[tag=Explosive] run function jojo:primaryexplosion
 
-# 2. PARTICLES: Visual confirmation
-execute at @e[tag=Explosive] run particle minecraft:flame ~ ~1 ~ 0.2 0.5 0.2 0.05 5
+execute store result storage jojo:playerdata TargetPos.x int 1 run data get entity @n[tag=Explosive] Pos[0] 1
+execute store result storage jojo:playerdata TargetPos.y int 1 run data get entity @n[tag=Explosive] Pos[1] 1
+execute store result storage jojo:playerdata TargetPos.z int 1 run data get entity @n[tag=Explosive] Pos[2] 1
 
-# 3. DETONATION: Spawns the "Primary Bomb"
-execute if score @a[team=KillerQueen,limit=1] boomstick-MB2 matches 1.. as @e[tag=Explosive] at @s run summon minecraft:creeper ~ ~ ~ {CustomName:'{"text":"Primary Bomb","color":"#a200ad"}',Fuse:0,ignited:1b,Invulnerable:1b,NoAI:1b,NoGravity:1b}
+execute as @e[tag=killerqueen.sha_bomb] at @s if entity @n[type=!#minecraft:not_targetable,type=!silverfish,tag=!SHABOMB,tag=!class.KillerQueen,distance=..1] run function jojo:sheerheartattack
+execute as @e[tag=killerqueen.sha_bomb] at @s run playsound block.stone.step hostile @a ~ ~ ~ 0.5 0.5
 
-# 4. RESET: Clear the score and tags
-execute if score @a[team=KillerQueen,limit=1] boomstick-MB2 matches 1.. run tag @e[tag=Explosive] remove Explosive
-scoreboard players set @a[team=KillerQueen] boomstick-MB2 0
+execute as @a[tag=class.KillerQueen] run function jojo:getpos with storage jojo:playerdata TargetPos
+
+execute as @a[tag=class.KillerQueen] run function jojo:sha_cooldown
+
+execute as @e[tag=killerqueen.sha_bomb] unless score @s killerqueen.sha.timer matches 0 run scoreboard players remove @s killerqueen.sha.timer 1
+execute as @e[tag=killerqueen.sha_bomb] if score @s killerqueen.sha.timer matches 0 run function jojo:sheerheartattack

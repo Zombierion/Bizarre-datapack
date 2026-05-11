@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "using_item": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:weathered_copper_bulb"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "using_item"
+    ]
+  ],
+  "rewards": {
+    "function": "jojo:sha_recall"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "using_item": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:netherite_upgrade_smithing_template"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "using_item"
+    ]
+  ],
+  "rewards": {
+    "function": "pilot:cycle_element"
+  }
+}
