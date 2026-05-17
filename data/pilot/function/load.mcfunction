@@ -23,3 +23,26 @@ scoreboard objectives add pilot.left_ground dummy
 #   Create jump_key_down tracker
 scoreboard objectives remove pilot.jump_key_down
 scoreboard objectives add pilot.jump_key_down dummy
+
+##  VOLTAGEN HEAL HANDLER
+#   Create pilot.heal_ticks buffer
+scoreboard objectives remove pilot.voltagen.heal_ticks
+scoreboard objectives add pilot.voltagen.heal_ticks dummy
+scoreboard players set .ticks pilot.voltagen.heal_ticks 50
+
+##  UMBRAFLUX DODGE HANDLER
+#   Create has_dodged tracker
+scoreboard objectives remove pilot.has_dodged
+scoreboard objectives add pilot.has_dodged dummy
+
+#   Create direction_key_down tracker
+scoreboard objectives remove pilot.direction_key_down
+scoreboard objectives add pilot.direction_key_down dummy
+
+#   Create direction_key_up tracker
+scoreboard objectives remove pilot.direction_key_up
+scoreboard objectives add pilot.direction_key_up dummy
+
+#   Create dodge_cooldown buffer
+scoreboard objectives remove pilot.dodge_cooldown
+scoreboard objectives add pilot.dodge_cooldown dummy

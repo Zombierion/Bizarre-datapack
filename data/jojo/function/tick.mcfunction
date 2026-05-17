@@ -14,5 +14,5 @@ execute as @a[tag=class.KillerQueen] run function jojo:getpos with storage jojo:
 
 execute as @a[tag=class.KillerQueen] run function jojo:sha_cooldown
 
-execute as @e[tag=killerqueen.sha_bomb] unless score @s killerqueen.sha.timer matches 0 run scoreboard players remove @s killerqueen.sha.timer 1
-execute as @e[tag=killerqueen.sha_bomb] if score @s killerqueen.sha.timer matches 0 run function jojo:sheerheartattack
+execute as @e[tag=killerqueen.sha_bomb] unless score @s killerqueen.sha.timer matches ..0 run scoreboard players remove @s killerqueen.sha.timer 1
+execute as @e[tag=killerqueen.sha_bomb] if score @s killerqueen.sha.timer matches ..0 run function jojo:sheerheartattack

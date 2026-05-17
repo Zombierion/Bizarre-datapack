@@ -104,6 +104,322 @@
             }
           ]
         }
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:all_of",
+          "terms": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "pilot.has_dodged"
+              },
+              "range": 0
+            },
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "pilot.direction_key_down"
+              },
+              "range": {
+                "max": 1
+              }
+            },
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "pilot.dodge_cooldown"
+              },
+              "range": {
+                "max": 0
+              }
+            },
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "minecraft:player",
+                  "input": {
+                    "forward": true
+                  }
+                },
+                "nbt": "{Tags:[\"pilot.element_charge.umbraflux\"]}",
+                "movement": {
+                  "horizontal_speed": {
+                    "min": 1
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "effect": {
+          "type":"all_of",
+          "effects": [
+            {
+              "type":"minecraft:run_function",
+              "function":"pilot:umbraflux/dodge/has_dodged"
+            },
+            {
+              "type": "minecraft:apply_impulse",
+              "direction": [
+                0,
+                0,
+                1
+              ],
+              "coordinate_scale": [
+                0,
+                0,
+                1
+              ],
+              "magnitude": 1
+            }
+          ]
+        }
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:all_of",
+          "terms": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "pilot.has_dodged"
+              },
+              "range": 0
+            },
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "pilot.direction_key_down"
+              },
+              "range": {
+                "max": 1
+              }
+            },
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "pilot.dodge_cooldown"
+              },
+              "range": {
+                "max": 0
+              }
+            },
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "minecraft:player",
+                  "input": {
+                    "backward": true
+                  }
+                },
+                "nbt": "{Tags:[\"pilot.element_charge.umbraflux\"]}",
+                "movement": {
+                  "horizontal_speed": {
+                    "max": -1
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "effect": {
+          "type":"all_of",
+          "effects": [
+            {
+              "type":"minecraft:run_function",
+              "function":"pilot:umbraflux/dodge/has_dodged"
+            },
+            {
+              "type": "minecraft:apply_impulse",
+              "direction": [
+                0,
+                0,
+                -1
+              ],
+              "coordinate_scale": [
+                0,
+                0,
+                1
+              ],
+              "magnitude": 1
+            }
+          ]
+        }
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:all_of",
+          "terms": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "pilot.has_dodged"
+              },
+              "range": 0
+            },
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "pilot.direction_key_down"
+              },
+              "range": {
+                "max": 1
+              }
+            },
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "pilot.dodge_cooldown"
+              },
+              "range": {
+                "max": 0
+              }
+            },
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "minecraft:player",
+                  "input": {
+                    "left": true
+                  }
+                },
+                "nbt": "{Tags:[\"pilot.element_charge.umbraflux\"]}",
+                "movement": {
+                  "horizontal_speed": {
+                    "min": 1
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "effect": {
+          "type":"all_of",
+          "effects": [
+            {
+              "type":"minecraft:run_function",
+              "function":"pilot:umbraflux/dodge/has_dodged"
+            },
+            {
+              "type": "minecraft:apply_impulse",
+              "direction": [
+                1,
+                0,
+                0
+              ],
+              "coordinate_scale": [
+                1,
+                0,
+                0
+              ],
+              "magnitude": 1
+            }
+          ]
+        }
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:all_of",
+          "terms": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "pilot.has_dodged"
+              },
+              "range": 0
+            },
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "pilot.direction_key_down"
+              },
+              "range": {
+                "max": 1
+              }
+            },
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "pilot.dodge_cooldown"
+              },
+              "range": {
+                "max": 0
+              }
+            },
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "minecraft:player",
+                  "input": {
+                    "right": true
+                  }
+                },
+                "nbt": "{Tags:[\"pilot.element_charge.umbraflux\"]}",
+                "movement": {
+                  "horizontal_speed": {
+                    "max": -1
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "effect": {
+          "type":"all_of",
+          "effects": [
+            {
+              "type":"minecraft:run_function",
+              "function":"pilot:umbraflux/dodge/has_dodged"
+            },
+            {
+              "type": "minecraft:apply_impulse",
+              "direction": [
+                -1,
+                0,
+                0
+              ],
+              "coordinate_scale": [
+                1,
+                0,
+                0
+              ],
+              "magnitude": 1
+            }
+          ]
+        }
       }
     ]
   }

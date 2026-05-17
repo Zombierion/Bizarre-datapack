@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "using_item": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:amethyst_shard"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "using_item"
+    ]
+  ],
+  "rewards": {
+    "function": "voidwalker:void_shift"
+  }
+}

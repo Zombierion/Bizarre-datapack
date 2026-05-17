@@ -10,9 +10,6 @@ tag @s remove pilot.element_charge.combustion
 tag @s remove pilot.element_charge.voltagen
 tag @s remove pilot.element_charge.umbraflux
 
-#   Remove voltagen speed
-effect clear @s speed
-
 #   Cycle selected_element index
 scoreboard players add @s pilot.selected_element 1
 execute if score @s pilot.selected_element matches 4 run scoreboard players set @s pilot.selected_element 1

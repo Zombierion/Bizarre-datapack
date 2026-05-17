@@ -2,6 +2,7 @@ summon minecraft:creeper 0 0 0 {Tags:["SHABOMB"],CustomName:{"text":"Sheer Heart
 execute at @s run playsound entity.generic.explode hostile @a ~ ~ ~ 1 1.7
 execute at @s run particle flame ~ ~ ~ 0.1 0.1 0.1 0.2 100 force
 tp @n[tag=SHABOMB] @s
-tp @s 0 -64 0
-kill @s
-execute as @a[tag=class.KillerQueen] run scoreboard players set @s killerqueen.sha.cooldown 600
+scoreboard players operation .search bizarre.uid = @s bizarre.uid
+scoreboard players set @p[predicate=bizarre:uid_search] killerqueen.sha.cooldown 30
+scoreboard players set @p[predicate=bizarre:uid_search] killerqueen.sha.cooldown.ticks 20
+function bizarre:clear_entity

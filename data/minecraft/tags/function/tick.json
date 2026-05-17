@@ -2,6 +2,7 @@
     "values": [
         "bizarre:tick",
         "jojo:tick",
-        "pilot:tick"
+        "pilot:tick",
+        "voidwalker:tick"
     ]
 }
