@@ -38,7 +38,7 @@ tellraw @a [                                                                    
         }                                                                           \
     },                                                                              \
     {                                                                               \
-        "text":"The Pilot\n",                                                       \
+        "text":"The Pilot ☻\n",                                                       \
         "color":"green",                                                          \
         click_event:{                                                               \
             action:"run_command",                                                   \

@@ -4,7 +4,7 @@
   "predicate": {
     "minecraft:type_specific/player": {
       "input": {
-        "backward": true
+        "sneak": true
       }
     }
   }

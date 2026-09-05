@@ -2,6 +2,7 @@
     "values": [
         "bizarre:load",
         "jojo:load",
-        "pilot:load"
+        "pilot:load",
+        "voidwalker:load"
     ]
 }

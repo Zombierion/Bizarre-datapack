@@ -11,4 +11,6 @@ execute as @s at @s run particle reverse_portal ~ ~ ~ 1 1 1 0.1 100 force
 execute as @s at @s run tp ~1000 ~ ~
 execute as @s at @s run particle portal ~ ~ ~ 1 1 1 0.1 100 force
 execute as @s at @s run playsound block.bell.resonate master @a ~ ~ ~ 1 2
+execute as @s at @s run effect give @s speed infinite 1 true
+execute as @s at @s run effect give @s jump_boost infinite 1 true
 execute as @s run scoreboard players set @s voidwalker.timer 200

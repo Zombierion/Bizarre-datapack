@@ -58,8 +58,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type_specific": {
-                  "type": "minecraft:player",
+                "minecraft:type_specific/player": {
                   "stats": [],
                   "input": {
                     "jump": true
@@ -144,8 +143,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type_specific": {
-                  "type": "minecraft:player",
+                "minecraft:type_specific/player": {
                   "input": {
                     "forward": true
                   }
@@ -161,11 +159,11 @@
           ]
         },
         "effect": {
-          "type":"all_of",
+          "type": "all_of",
           "effects": [
             {
-              "type":"minecraft:run_function",
-              "function":"pilot:umbraflux/dodge/has_dodged"
+              "type": "minecraft:run_function",
+              "function": "pilot:umbraflux/dodge/has_dodged"
             },
             {
               "type": "minecraft:apply_impulse",
@@ -223,8 +221,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type_specific": {
-                  "type": "minecraft:player",
+                "minecraft:type_specific/player": {
                   "input": {
                     "backward": true
                   }
@@ -240,11 +237,11 @@
           ]
         },
         "effect": {
-          "type":"all_of",
+          "type": "all_of",
           "effects": [
             {
-              "type":"minecraft:run_function",
-              "function":"pilot:umbraflux/dodge/has_dodged"
+              "type": "minecraft:run_function",
+              "function": "pilot:umbraflux/dodge/has_dodged"
             },
             {
               "type": "minecraft:apply_impulse",
@@ -302,8 +299,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type_specific": {
-                  "type": "minecraft:player",
+                "minecraft:type_specific/player": {
                   "input": {
                     "left": true
                   }
@@ -319,11 +315,11 @@
           ]
         },
         "effect": {
-          "type":"all_of",
+          "type": "all_of",
           "effects": [
             {
-              "type":"minecraft:run_function",
-              "function":"pilot:umbraflux/dodge/has_dodged"
+              "type": "minecraft:run_function",
+              "function": "pilot:umbraflux/dodge/has_dodged"
             },
             {
               "type": "minecraft:apply_impulse",
@@ -381,8 +377,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type_specific": {
-                  "type": "minecraft:player",
+                "minecraft:type_specific/player": {
                   "input": {
                     "right": true
                   }
@@ -398,11 +393,11 @@
           ]
         },
         "effect": {
-          "type":"all_of",
+          "type": "all_of",
           "effects": [
             {
-              "type":"minecraft:run_function",
-              "function":"pilot:umbraflux/dodge/has_dodged"
+              "type": "minecraft:run_function",
+              "function": "pilot:umbraflux/dodge/has_dodged"
             },
             {
               "type": "minecraft:apply_impulse",

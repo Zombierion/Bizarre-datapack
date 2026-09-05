@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "using_item": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:snowball"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "using_item"
+    ]
+  ],
+  "rewards": {
+    "function": "voidwalker:throw_pocket_void"
+  }
+}
