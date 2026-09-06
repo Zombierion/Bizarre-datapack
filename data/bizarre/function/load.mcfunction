@@ -9,6 +9,7 @@ scoreboard objectives add bizarre.respawn dummy
 scoreboard objectives remove bizarre.respawn.ticks
 scoreboard objectives add bizarre.respawn.ticks dummy
 scoreboard players set .respawn_time bizarre.respawn 5
+title @a times 0 20 0
 
 ##  CUSTOM HEALTH HANDLER
 scoreboard objectives remove bizarre.health

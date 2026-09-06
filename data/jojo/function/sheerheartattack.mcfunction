@@ -5,4 +5,5 @@ tp @n[tag=SHABOMB] @s
 scoreboard players operation .search bizarre.uid = @s bizarre.uid
 scoreboard players set @p[predicate=bizarre:uid_search] killerqueen.sha.cooldown 30
 scoreboard players set @p[predicate=bizarre:uid_search] killerqueen.sha.cooldown.ticks 20
+kill @n[tag=killerqueen.sha.model]
 function bizarre:clear_entity

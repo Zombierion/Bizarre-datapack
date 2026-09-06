@@ -1,6 +1,5 @@
 scoreboard players operation .search bizarre.uid = @s bizarre.uid
 summon mannequin ~ ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Glowing:1b,Team:"voidwalker.glow",Health:999999999999f,immovable:true,Tags:["voidwalker.mimic","voidwalker.spawn"],profile:{"properties":[{"name":"textures","value":"ewogICJ0aW1lc3RhbXAiIDogMTc4ODU3NzMzMTgyNiwKICAicHJvZmlsZUlkIiA6ICI5OWZkOTVkY2VjMDY0NDlkYTU5MDc3MjYyY2Q3NDM2NSIsCiAgInByb2ZpbGVOYW1lIiA6ICJEYXRjcmF6M2dhbWVyIiwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzJmZTc5NTc1MjkzZjg2YzcyNDViMGM2ZDhkMWNmMTEwNGRhMWM3ODU2ZTFmOTUxNGY4NWUxNTlmOWU1MGE1YjciCiAgICB9CiAgfQp9"}]}}
 scoreboard players operation @n[tag=voidwalker.mimic,tag=voidwalker.spawn] bizarre.uid = @s bizarre.uid
-say "summoned mimic!"
 tag @s add voidwalker.mimic_host
 tag @e remove voidwalker.spawn

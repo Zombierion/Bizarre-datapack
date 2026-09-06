@@ -7,7 +7,7 @@ execute store result storage jojo:playerdata TargetPos.x int 1 run data get enti
 execute store result storage jojo:playerdata TargetPos.y int 1 run data get entity @n[tag=Explosive] Pos[1] 1
 execute store result storage jojo:playerdata TargetPos.z int 1 run data get entity @n[tag=Explosive] Pos[2] 1
 
-execute as @e[tag=killerqueen.sha_bomb] at @s if entity @n[type=!#minecraft:not_targetable,type=!silverfish,tag=!SHABOMB,tag=!class.KillerQueen,distance=..1] run function jojo:sheerheartattack
+execute as @e[tag=killerqueen.sha_bomb] at @s run function jojo:sha_set_target
 execute as @e[tag=killerqueen.sha_bomb] at @s run playsound block.stone.step hostile @a ~ ~ ~ 0.5 0.5
 
 execute as @a[tag=class.KillerQueen] run function jojo:getpos with storage jojo:playerdata TargetPos

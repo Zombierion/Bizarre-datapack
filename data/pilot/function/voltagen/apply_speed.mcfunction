@@ -10,7 +10,7 @@ execute at @s[predicate=bizarre:sprint_key_down,predicate=pilot:is_moving] run p
 execute at @s[predicate=bizarre:sprint_key_down,predicate=pilot:is_moving,nbt={OnGround:1b}] run playsound block.stone.step player @a ~ ~ ~ 0.5 0.5
 
 #   Damage entities on contact
-execute at @s[predicate=bizarre:sprint_key_down,predicate=pilot:is_moving] as @n[nbt=!{Invulnerable:1b},distance=..1,tag=!pilot.element_charge.voltagen,tag=!bizarre.respawn] run function pilot:damage/paving
+execute at @s[tag=!bizarre.respawn,predicate=bizarre:sprint_key_down,predicate=pilot:is_moving] as @n[nbt=!{Invulnerable:1b},distance=..1,tag=!pilot.element_charge.voltagen,tag=!bizarre.respawn] run function pilot:damage/paving
 
 #   Heal when stationary
 execute as @s[predicate=bizarre:sprint_key_down,predicate=!pilot:is_moving] unless score @s bizarre.health matches 100 run function pilot:voltagen/healing_current

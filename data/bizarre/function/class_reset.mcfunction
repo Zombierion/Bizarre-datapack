@@ -9,5 +9,8 @@ tag @s remove pilot.element_charge.combustion
 tag @s remove pilot.element_charge.umbraflux
 tag @s remove pilot.element_charge.voltagen
 
+#   RESET VOIDWALKER CLASS
+tag @s remove class.VoidWalker
+
 #   REMOVE CLASS ITEMS
 clear @s *[custom_data={"class_item":1b}]

@@ -7,6 +7,9 @@ scoreboard objectives add voidwalker.used_item_delay dummy
 scoreboard objectives remove voidwalker.timer
 scoreboard objectives add voidwalker.timer dummy
 
+scoreboard objectives remove voidwalker.pocket_thrown
+scoreboard objectives add voidwalker.pocket_thrown minecraft.used:minecraft.snowball
+
 team remove voidwalker.glow
 team add voidwalker.glow
 team modify voidwalker.glow color light_purple
