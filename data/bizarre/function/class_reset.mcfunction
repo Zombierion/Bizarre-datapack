@@ -13,4 +13,4 @@ tag @s remove pilot.element_charge.voltagen
 tag @s remove class.VoidWalker
 
 #   REMOVE CLASS ITEMS
-clear @s *[custom_data={"class_item":1b}]
+clear @s *[custom_data~{"class_item":1b}]

@@ -1,0 +1,41 @@
+{
+  "attributes": {
+    "minecraft:audio/ambient_sounds": {
+      "loop": "minecraft:block.beacon.ambient"
+    },
+    "minecraft:visual/ambient_particles": {
+      "modifier": "override",
+      "argument": [
+        {
+          "particle": {
+            "type": "minecraft:dust",
+            "color": 0,
+            "scale": 1
+          },
+          "probability": 0.01
+        },
+        {
+          "particle": {
+            "type": "minecraft:end_rod"
+          },
+          "probability": 0.0001
+        }
+      ]
+    },
+    "minecraft:visual/ambient_light_color": 196613
+  },
+  "has_skylight": false,
+  "has_ceiling": false,
+  "has_ender_dragon_fight": false,
+  "coordinate_scale": 1,
+  "ambient_light": 0.01,
+  "has_fixed_time": true,
+  "logical_height": 0,
+  "skybox": "end",
+  "cardinal_light": "default",
+  "infiniburn": "minecraft:netherrack",
+  "min_y": -64,
+  "height": 384,
+  "monster_spawn_light_level": 0,
+  "monster_spawn_block_light_limit": 0
+}

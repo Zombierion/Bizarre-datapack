@@ -12,9 +12,12 @@ scoreboard objectives add voidwalker.pocket_thrown minecraft.used:minecraft.snow
 
 team remove voidwalker.glow
 team add voidwalker.glow
-team modify voidwalker.glow color light_purple
+team modify voidwalker.glow color white
 
+##  RESET MIMICS
 tag @a remove voidwalker.mimic_host
-
 kill @e[tag=voidwalker.mimic]
 execute as @a[tag=!voidwalker.mimic_host] run function voidwalker:summon_void_mimic
+
+##  REMOVE PLAYERS IN VOID
+execute as @a[tag=voidwalker.shifted] at @s run function voidwalker:void_unshift

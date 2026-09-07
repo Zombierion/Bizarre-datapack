@@ -3,6 +3,7 @@
         "minecraft:block_display",
         "minecraft:item",
         "#impact_projectiles",
-        "#boat"
+        "#boat",
+        "minecraft:mannequin"
     ]
 }
