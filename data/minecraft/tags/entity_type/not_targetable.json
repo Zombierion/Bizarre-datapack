@@ -1,9 +1,12 @@
 {
     "values": [
+        "minecraft:interaction",
+        "minecraft:item_display",
         "minecraft:block_display",
+        "minecraft:mannequin",
+        "minecraft:marker",
         "minecraft:item",
         "#impact_projectiles",
-        "#boat",
-        "minecraft:mannequin"
+        "#boat"
     ]
 }

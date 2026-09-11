@@ -22,7 +22,7 @@ scoreboard objectives add bizarre.defense dummy
 ##  CLASS TEST MESSAGE
 tellraw @a [                                                                        \
     {                                                                               \
-        "text":"SELECT YOUR CLASS\n",                                               \
+        "text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n    SELECT YOUR CLASS\n",               \
         bold:true,                                                                  \
         color:"dark_green"                                                        \
     },                                                                              \
@@ -31,7 +31,7 @@ tellraw @a [                                                                    
         "color":"green"                                                           \
     },                                                                              \
     {                                                                               \
-        "text":"Killer Queen\n",                                                    \
+        "text":" - Killer Queen\n",                                                 \
         "color":"light_purple",                                                   \
         click_event:{                                                               \
             action:"run_command",                                                   \
@@ -39,7 +39,7 @@ tellraw @a [                                                                    
         }                                                                           \
     },                                                                              \
     {                                                                               \
-        "text":"The Pilot ☻\n",                                                       \
+        "text":" - The Pilot\n",                                                    \
         "color":"green",                                                          \
         click_event:{                                                               \
             action:"run_command",                                                   \
@@ -47,11 +47,20 @@ tellraw @a [                                                                    
         }                                                                           \
     },                                                                              \
     {                                                                               \
-        "text":"Void Walker",                                                       \
+        "text":" - Void Walker\n",                                                  \
         "color":"black",                                                          \
         click_event:{                                                               \
             action:"run_command",                                                   \
             command:"execute as @s run function voidwalker:init"                    \
+        }                                                                           \
+    },                                                                              \
+    {                                                                               \
+        "text":" - RESET CLASS\n",                                                  \
+        "color":"dark_red",                                                       \
+        "bold": true,                                                               \
+        click_event:{                                                               \
+            action:"run_command",                                                   \
+            command:"execute as @s run function bizarre:class_reset"                \
         }                                                                           \
     }                                                                               \
 ]

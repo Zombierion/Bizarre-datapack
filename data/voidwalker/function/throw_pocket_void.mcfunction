@@ -1,3 +1,4 @@
 execute as @n[type=snowball,tag=!voidwalker.pocketvoid] at @s run tag @s add voidwalker.pocketvoid
 execute as @n[type=snowball,tag=voidwalker.pocketvoid] at @s run summon marker ~ ~ ~ {Tags:["voidwalker.pocketvoid_marker"]}
 execute as @n[type=marker,tag=voidwalker.pocketvoid_marker] at @s run ride @n[type=marker,tag=voidwalker.pocketvoid_marker] mount @n[type=snowball,tag=voidwalker.pocketvoid]
+execute as @s run give @s snowball[custom_data={"class_item":1b,"class":"void_walker"},custom_name=[{"text":"Unstable Pocket Void","italic":false,"color":"#51005c"}],rarity=epic,tooltip_display={hide_tooltip:true,hidden_components:[enchantments]},enchantment_glint_override=true,item_model=ender_eye,use_cooldown={seconds:20}]

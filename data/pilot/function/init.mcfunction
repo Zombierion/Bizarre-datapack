@@ -3,8 +3,10 @@ function bizarre:class_reset
 
 tag @s add class.pilot
 tellraw @s {"text":"ERR: SYSTEM UNDER REPAIRS", bold:true, color:"red"}
-item replace entity @s armor.feet with leather_boots[custom_data={"class_item":1b,"class":"the_pilot"},enchantments={"pilot:tacb_handler":1,"binding_curse":1b},unbreakable={},enchantment_glint_override=false,tooltip_display={hide_tooltip:1b}]
-item replace entity @s hotbar.8 with netherite_upgrade_smithing_template[custom_data={"class_item":1b,"class":"the_pilot"},consumable={animation:"crossbow",consume_seconds:9999,has_consume_particles:false,sound:entity.shulker.hurt_closed},item_model="bolt_armor_trim_smithing_template",item_name={"text":"Element Battery",italic:false},use_effects={can_sprint:true,speed_multiplier:1},tooltip_display={hide_tooltip:true}]
+item replace entity @s armor.feet with leather_boots[custom_data={"class_item":1b,"class":"the_pilot"},enchantments={"pilot:tacb_handler":1,"binding_curse":1b},unbreakable={},enchantment_glint_override=false,tooltip_display={hide_tooltip:true},!attribute_modifiers]
+item replace entity @s hotbar.8 with netherite_upgrade_smithing_template[custom_data={"class_item":1b,"class":"the_pilot"},consumable={animation:"crossbow",consume_seconds:9999,has_consume_particles:false},item_model="bolt_armor_trim_smithing_template",item_name={"text":"Element Battery",italic:false},use_effects={can_sprint:true,speed_multiplier:1},tooltip_display={hide_tooltip:true},swing_animation={type:"none",duration:1}]
+item replace entity @s hotbar.0 with wooden_sword[custom_data={"class_item":1b,"class":"the_pilot"},consumable={animation:"spear",consume_seconds:9999,has_consume_particles:false},item_model="copper_sword",item_name={"text":"MPCK-2",italic:false},use_effects={can_sprint:true,speed_multiplier:1},tooltip_display={hide_tooltip:true},unbreakable={},swing_animation={type:"stab",duration:12},!attribute_modifiers]
+
 
 #   Set element charge
 tag @s add pilot.element_charge.combustion

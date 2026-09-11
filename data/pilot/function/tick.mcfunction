@@ -22,7 +22,7 @@ execute as @a[tag=class.pilot,nbt={fall_distance:0.0}] if score @s pilot.has_dou
 
 ##  VOLTAGEN
 #   Apply speed
-execute as @a[tag=class.pilot,tag=pilot.element_charge.voltagen] at @s run function pilot:voltagen/apply_speed
+execute as @a[tag=class.pilot,tag=pilot.element_charge.voltagen,tag=!bizarre.respawn] at @s run function pilot:voltagen/apply_speed
 execute as @a[tag=class.pilot,predicate=!bizarre:sprint_key_down] run attribute @s movement_speed base reset
 execute as @a[tag=class.pilot,predicate=!bizarre:sprint_key_down] run attribute @s step_height base reset
 execute as @a[tag=class.pilot,tag=!pilot.element_charge.voltagen] run attribute @s movement_speed base reset
@@ -34,6 +34,7 @@ execute as @a[tag=class.pilot,predicate=!bizarre:direction_key_down] run scorebo
 execute as @a[tag=class.pilot,predicate=bizarre:direction_key_down] run scoreboard players add @s pilot.direction_key_down 1
 execute as @a[tag=class.pilot,predicate=!bizarre:direction_key_down] if score @s pilot.direction_key_up matches 5.. run scoreboard players set @s pilot.direction_key_down 0
 execute as @a[tag=class.pilot] if score @s pilot.direction_key_down matches 1.. run scoreboard players set @s pilot.direction_key_up 0
+
 #   Reduce Cooldown
 execute as @a[tag=class.pilot,scores={pilot.dodge_cooldown=1..}] run scoreboard players remove @s pilot.dodge_cooldown 1
 execute as @a[tag=class.pilot,scores={pilot.dodge_cooldown=..0}] run scoreboard players set @s pilot.has_dodged 0

@@ -46,3 +46,6 @@ scoreboard objectives add pilot.direction_key_up dummy
 #   Create dodge_cooldown buffer
 scoreboard objectives remove pilot.dodge_cooldown
 scoreboard objectives add pilot.dodge_cooldown dummy
+
+##  ELEMENT RESET
+execute as @a[tag=class.pilot] at @s run function pilot:init

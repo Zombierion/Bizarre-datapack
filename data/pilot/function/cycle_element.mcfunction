@@ -21,8 +21,11 @@ execute if score @s pilot.selected_element matches 3 run tag @s add pilot.elemen
 
 #   Temporary item model handler
 item modify entity @s[tag=pilot.element_charge.combustion] hotbar.8 {"function":"minecraft:set_components","components":{item_model:"bolt_armor_trim_smithing_template"}}
+item modify entity @s[tag=pilot.element_charge.combustion] hotbar.0 {"function":"minecraft:set_components","components":{item_model:"copper_sword"}}
 item modify entity @s[tag=pilot.element_charge.voltagen] hotbar.8 {"function":"minecraft:set_components","components":{item_model:"shaper_armor_trim_smithing_template"}}
+item modify entity @s[tag=pilot.element_charge.voltagen] hotbar.0 {"function":"minecraft:set_components","components":{item_model:"diamond_sword"}}
 item modify entity @s[tag=pilot.element_charge.umbraflux] hotbar.8 {"function":"minecraft:set_components","components":{item_model:"flow_armor_trim_smithing_template"}}
+item modify entity @s[tag=pilot.element_charge.umbraflux] hotbar.0 {"function":"minecraft:set_components","components":{item_model:"netherite_sword"}}
 
 #   Additional actions
 execute at @s run playsound minecraft:entity.shulker.hurt_closed master @a ~ ~ ~ 0.5 2

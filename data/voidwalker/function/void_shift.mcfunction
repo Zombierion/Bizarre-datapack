@@ -10,6 +10,4 @@ particle reverse_portal ~ ~ ~ 1 1 1 0.1 100 force
 execute in voidwalker:the_shift run tp ~ ~ ~
 execute in voidwalker:the_shift run particle portal ~ ~ ~ 1 1 1 0.1 100 force
 execute in voidwalker:the_shift run playsound block.bell.resonate master @a ~ ~ ~ 1 2
-effect give @s speed infinite 1 true
-effect give @s jump_boost infinite 1 true
-scoreboard players add @s voidwalker.timer 20
+scoreboard players add @s[tag=class.VoidWalker] voidwalker.timer 20
