@@ -1,3 +1,6 @@
+#   CLASS CONSTRUCTOR
+function pilot:class
+
 ##  ELEMENT HANDLER
 #   Create selected_element tracker
 scoreboard objectives remove pilot.selected_element

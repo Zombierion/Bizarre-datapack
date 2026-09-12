@@ -1,0 +1,1 @@
+$execute store result score @s bizarre.health run data get storage bizarre:class_data classes[].$(class).health

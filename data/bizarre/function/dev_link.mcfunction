@@ -1,3 +1,5 @@
+##  REPLACE CURRENT LINK WITH NEW ONE
+
 tellraw @s {                                                                                                        \
     "text":"Click Here to Copy the Current Liveshare Link",                                                         \
     "color":"yellow",                                                                                             \

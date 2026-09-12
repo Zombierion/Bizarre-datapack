@@ -19,6 +19,39 @@ scoreboard objectives add bizarre.health dummy
 scoreboard objectives remove bizarre.defense
 scoreboard objectives add bizarre.defense dummy
 
+##  CLASS STORAGE HANDLER
+data remove storage bizarre:class_data classes
+data modify storage bizarre:class_data classes set value []
+
+##  CLASS CONSTRUCTOR TEMPLATE
+#   Use this template when creating a new class to implement the custom stat system.
+#
+#- class.mcfunction ----------------------------------------------------------------
+# data modify storage bizarre:class_data classes append value {   \
+#    "class_id": {                                                \
+#        "name": "Class Name",                                    \
+#        "health": 100,                                           \
+#        "defense": "30",                                         \
+#        "attacks": [                                             \
+#             {                                                   \
+#                "attack_id_1": {                                 \
+#                    "base_damage": 30,                           \
+#                    "ignores_defense": true                      \
+#                }                                                \
+#             },                                                  \
+#             {                                                   \
+#                "attack_id_2": {                                 \
+#                    "base_damage": 15,                           \
+#                    "ignores_defense": false                     \
+#                }                                                \
+#             }                                                   \
+#        ]                                                        \
+#     }                                                           \
+# }
+#-----------------------------------------------------------------------------------
+
+
+
 ##  CLASS TEST MESSAGE
 tellraw @a [                                                                        \
     {                                                                               \
