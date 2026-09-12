@@ -31,18 +31,23 @@ data modify storage bizarre:class_data classes set value []
 #    "class_id": {                                                \
 #        "name": "Class Name",                                    \
 #        "health": 100,                                           \
-#        "defense": "30",                                         \
+#        "defense": {                                             \
+#         "base_defense": 20,                                     \
+#         "fire_defense": 2                                       \
+#        },                                                       \
 #        "attacks": [                                             \
 #             {                                                   \
 #                "attack_id_1": {                                 \
 #                    "base_damage": 30,                           \
-#                    "ignores_defense": true                      \
+#                    "ignores_defense": true,                     \
+#                    "damage_type": "fire"                        \
 #                }                                                \
 #             },                                                  \
 #             {                                                   \
 #                "attack_id_2": {                                 \
 #                    "base_damage": 15,                           \
-#                    "ignores_defense": false                     \
+#                    "ignores_defense": false,                    \
+#                    "damage_type": "physical"                    \
 #                }                                                \
 #             }                                                   \
 #        ]                                                        \
