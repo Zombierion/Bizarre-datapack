@@ -33,6 +33,7 @@ execute as @e[type=marker,tag=voidwalker.shard_tracker] at @s run teleport @s ^ 
 execute as @e[type=marker,tag=voidwalker.shard_tracker] at @s run particle dust{color:[0.88,0.0,1.0],scale:1} ~ ~ ~ 0.05 0.05 0.05 0.005 5 force
 execute as @e[type=marker,tag=voidwalker.shard_tracker] run scoreboard players add @s voidwalker.shard_projectile_age 1
 execute as @e[type=marker,tag=voidwalker.shard_tracker] at @s unless block ~ ~ ~ air run tag @s add voidwalker.kill_shard
+execute as @e[type=marker,tag=voidwalker.shard_tracker] at @s if entity @n[type=!marker,tag=!class.VoidWalker,distance=..2] run function voidwalker:shard_projectile_effects
 execute as @e[type=marker,tag=voidwalker.shard_tracker] if score @s voidwalker.shard_projectile_age matches 100.. run tag @s add voidwalker.kill_shard
 kill @e[type=marker,tag=voidwalker.kill_shard]
 execute as @a[tag=class.VoidWalker] if score @s voidwalker.shard_projectile_timer matches 1.. run scoreboard players remove @s voidwalker.shard_projectile_timer 1
